@@ -41,6 +41,12 @@ def generate_recipe(query, dietary_pref, metric):
 
     global chatHistory
 
+    if metric==None:
+        metric="Imperial"
+
+    if dietary_pref==None:
+        dietary_pref="None specified"
+
     messages = [
         {"role": "system",
          "content": f'''
